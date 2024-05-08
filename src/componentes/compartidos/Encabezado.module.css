@@ -1,0 +1,6 @@
+.ecabezado{
+    @apply  flex justify-between
+}
+.opcionesfiltro{
+    @apply mx-2
+}
