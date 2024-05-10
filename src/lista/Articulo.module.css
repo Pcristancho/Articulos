@@ -1,0 +1,9 @@
+img{
+    @apply w-full
+}
+.contenedor{
+    @apply bg-teal-500 mx-1 my-3
+}
+/* .articulo{
+    @apply
+} */

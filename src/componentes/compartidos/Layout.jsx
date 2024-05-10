@@ -2,7 +2,7 @@ import Encabezado from "./Encabezado.jsx";
 import Principal from "./Principal.jsx";
 
 
-function Layer(){
+function Layout(){
     return(
         <>
             <Encabezado></Encabezado>
@@ -10,4 +10,4 @@ function Layer(){
         </>
     );
 }
-export default Layer;
+export default Layout;

@@ -7,7 +7,7 @@ function Encabezado(){
             <div>
                 {/* <p className="text-3xl font-bold underline bg-red-800">logo</p> */}
                 {/* <img src="./src/img/pngegg.png" className="h-10" style={{height: 2.5+"rem"}} ></img> */}
-                <img src="./src/img/pngegg.png" className="h-10" ></img>
+                <img src="./src/img/pngegg.png" className="w-10" ></img>
             </div>
             <div className="flex justify-between">
                 <div className={estilosEncabezado.opcionesfiltro}><p>CLASIFICAR POR &#5167; </p></div>
