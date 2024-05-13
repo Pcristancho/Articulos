@@ -2,8 +2,12 @@ img{
     @apply w-full
 }
 .contenedor{
-    @apply bg-teal-500 mx-1 my-3
+    @apply bg-teal-500 mx-1 my-3 duration-500 scale-100 
 }
+.contenedor:hover{
+    @apply duration-500 scale-125 z-10
+}
+
 /* .articulo{
     @apply
 } */
