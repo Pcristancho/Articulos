@@ -1,4 +1,6 @@
+import { useContext } from "react";
 import Articulo from "./Articulo";
+import { Contexto } from "../servicios/Memoria";
 
 const ListaMock=[
     {
@@ -9,22 +11,23 @@ const ListaMock=[
         "precio":"14.900",
         "añoColeccion":"Nueva Colección"
     },
-    {
-        "id":"2",
-        "imgSrc":'./src/img/img2.png',
-        "titulo":"Saco 2",
-        "descripcion":"descripcion de saco 2",
-        "precio":"14.900",
-        "añoColeccion":"2007"
-    }
+    // {
+    //     "id":"2",
+    //     "imgSrc":'./src/img/img2.png',
+    //     "titulo":"Saco 2",
+    //     "descripcion":"descripcion de saco 2",
+    //     "precio":"14.900",
+    //     "añoColeccion":"2007"
+    // }
 ]
 function Lista(){
-    const artic=ListaMock
+    //const artic=ListaMock 
+    const artic=useContext(Contexto);
     return(
         <div className="grid grid-cols-4 ">
             {/* <p>aqui va la lista</p>
             <p>{JSON.stringify(artic)}</p> */}
-            {artic.map((articulo)=>(<Articulo {...articulo}></Articulo>))}
+            {artic.map((articulo)=>(<Articulo {...articulo} key={articulo.id}></Articulo>))}
             
         </div>
     );

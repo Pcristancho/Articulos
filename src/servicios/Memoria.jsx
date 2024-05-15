@@ -20,12 +20,15 @@ const ListaMock=[
         "añoColeccion":"2007"
     }
 ]
-
 const estadoInicial={
     orden:[],
     objetos:{}
 }
-
-function Memoria(){
-    
+function Memoria({children}){
+    return(
+        <Contexto.Provider value={ListaMock}>
+            {children}
+        </Contexto.Provider>
+    )
 }
+export default Memoria;
