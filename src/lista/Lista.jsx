@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import Articulo from "./Articulo";
 import { Contexto } from "../servicios/Memoria";
+import estilosLista from './Lista.module.css'
 
 const ListaMock=[
     {
@@ -24,7 +25,8 @@ function Lista(){
     //const artic=ListaMock 
     const artic=useContext(Contexto);
     return(
-        <div className="grid grid-cols-4 ">
+        // <div className="grid grid-cols-4 ">
+        <div className={estilosLista.responsiveList}>
             {/* <p>aqui va la lista</p>
             <p>{JSON.stringify(artic)}</p> */}
             {artic.map((articulo)=>(<Articulo {...articulo} key={articulo.id}></Articulo>))}
