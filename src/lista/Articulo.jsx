@@ -18,7 +18,7 @@ function Articulo({...articuloMock}){
                 </div>
                 <div className='text-sm'>   
                     <p>{articulo.titulo}</p>
-                    <p>{articulo.precio}</p>
+                    <p>${articulo.precio}</p>
                     {vectorDescripcion.map((descrip,indice)=>(<span className={estilosArticulo.descripciones} key={indice}>{descrip}</span>))}
                     
                     <p>{articulo.añoColeccion}</p>

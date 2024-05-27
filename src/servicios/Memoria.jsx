@@ -1,6 +1,7 @@
 import { createContext } from "react"
 
 export const Contexto=createContext(null);
+export const ContextoMarcas=createContext(null);
 // OJO LAS REFERENCIAS DE IMAGENS O ASI SE HACEN TENIENDO EN CUENTA REFERENCIA DESDE EL HTML no del componente
 const ListaMock=[
     {
@@ -43,14 +44,36 @@ const ListaMock=[
         "enlace":"https://ovejito.com/products/saco-artesanal-tejido-2"
     }
 ]
+const Tiendas=[
+    {
+        "nombre":"falabella",
+        "logo":"./src/img/LogoFalabella.png",
+        "enlace":"https://www.falabella.com.co/"
+    },
+    {
+        "nombre":"urbenmood",
+        "logo":"./src/img/LogoUndermood.png",
+        "enlace":"https://www.urbenmood.com/"
+    },
+    {
+        "nombre":"ovejito",
+        "logo":"./src/img/logoOvejito.png",
+        "enlace":"https://ovejito.com/"
+    }
+]
+
 const estadoInicial={
     orden:[],
     objetos:{}
 }
+
 function Memoria({children}){
     return(
         <Contexto.Provider value={ListaMock}>
-            {children}
+            <ContextoMarcas.Provider value={Tiendas}>
+                {children}
+            </ContextoMarcas.Provider>
+            
         </Contexto.Provider>
     )
 }

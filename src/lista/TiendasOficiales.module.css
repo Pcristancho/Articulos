@@ -1,0 +1,6 @@
+.contenedor{
+    @apply grid grid-cols-3 items-center ;
+}
+.tienda{
+    @apply mx-2;
+}
